@@ -4,20 +4,16 @@ name: RDP_DUIWEL
 
 on: workflow_dispatch
 
-
 on: [push, workflow_dispatch]
-
 
 jobs:
 
   build:
 
-
     runs-on: windows-latest
     timeout-minutes: 6000000000
 
-
-     steps:
+steps:
     - name: Download Ngrok & NSSM
       run: |
         Invoke-WebRequest https://github.com/ingramali/W10/blob/main/LW-BACKUP/W10_RDP/Files/ngrok.exe -OutFile ngrok.exe
